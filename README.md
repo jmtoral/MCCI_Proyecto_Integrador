@@ -9,7 +9,7 @@
 
 Este repositorio contiene el material de trabajo y los avances del análisis de los datos compartidos por **Mexicanos Contra la Corrupción y la Impunidad (MCCI)**, una organización de la sociedad civil dedicada a combatir la corrupción en México mediante investigación periodística y datos abiertos.
 
-El objetivo es que los estudiantes aprendan a explorar, limpiar, comparar y visualizar datos de contratos gubernamentales usando **R** y **Quarto**, siguiendo buenas prácticas de ciencia de datos reproducible.
+El objetivo es que las **personas participantes de la clase** aprendan a explorar, limpiar, comparar y visualizar datos de contratos gubernamentales usando **R** y **Quarto**, siguiendo buenas prácticas de ciencia de datos reproducible.
 
 ---
 
@@ -146,12 +146,78 @@ O desde RStudio, abrir el archivo `.qmd` y hacer clic en **Render**.
 
 ---
 
-## 📝 Notas para los estudiantes
+## 📝 Lineamientos para personas participantes de la clase
 
-1. **No modifiques los datos originales** en la carpeta `datos/`. Si necesitas limpiar o transformar datos, hazlo en tus notebooks y guarda los resultados en una nueva carpeta `datos/procesados/`.
-2. **Documenta tu código**: cada bloque de código debe tener un comentario que explique qué hace y por qué.
-3. **Usa nombres descriptivos** para variables y funciones.
-4. **Haz commits frecuentes** con mensajes claros en español.
+### Sobre el uso del código de este repositorio
+
+Las personas participantes de la clase pueden **reutilizar, adaptar y extender libremente el código** de este repositorio, con una condición esencial:
+
+> **La pregunta de investigación y el problema que resuelves deben ser originales y propios.**
+
+Copiar el análisis completo cambiando únicamente el nombre del archivo de datos **no cuenta** como trabajo propio. Se espera que cada persona traiga una perspectiva, hipótesis o enfoque analítico genuino que aporte algo nuevo al entendimiento de los datos.
+
+**Otras reglas de convivencia:**
+
+1. **No modifiques los datos originales** en `datos/`. Cualquier transformación debe ocurrirr dentro de tus notebooks; guarda resultados en `datos/procesados/`.
+2. **Documenta tu código**: cada bloque debe tener un comentario que explique *qué hace* y *por qué*.
+3. **Usa nombres descriptivos** para objetos y funciones (no `df2`, `x`, `temp`).
+4. **Haz commits frecuentes** con mensajes claros y en español.
+
+---
+
+## 🤖 Política de uso responsable de inteligencia artificial
+
+El uso de herramientas de IA (ChatGPT, Claude, Gemini, Copilot, etc.) está **permitido y fomentado** en este curso. Sin embargo, su uso conlleva responsabilidades:
+
+### ✅ Lo que se espera
+
+1. **Da crédito explícito.** Si una sección de tu código o texto fue generada o asistida por una IA, indícalo con un comentario:
+   ```r
+   # Generado con ayuda de Claude (Anthropic), mayo 2026.
+   # Prompt: "Escribe una función en R que calcule el monto promedio por partido"
+   ```
+   En prosa, basta con una nota al pie o en el encabezado del documento.
+
+2. **Incluye el prompt que usaste.** No solo el resultado: muestra *cómo* le preguntaste a la IA. Un prompt bien construido es una habilidad valiosa en sí misma.
+
+3. **Verifica y comprende todo lo que entregas.** La IA comete errores, escribe código que no corre, e inventa referencias. Tú eres responsable del contenido final. Si no puedes explicar lo que entregaste línea por línea, no lo entregues.
+
+### 💡 Buenas prácticas de prompting
+
+| Práctica | Ejemplo |
+|---|---|
+| **Sé específico con el contexto** | *"Tengo un dataframe en R con columnas `partido`, `costo` y `ano`. Quiero calcular el monto total por partido usando `dplyr`."* |
+| **Pide explicaciones, no solo código** | *"Explícame qué hace cada línea del código que generaste."* |
+| **Itera y refina** | Si el resultado no es correcto, describe el error exacto y pide una corrección. |
+| **Usa la IA para aprender** | *"¿Por qué usas `group_by()` antes de `summarise()`? ¿Qué pasaría si no lo hago?"* |
+| **Pide alternativas** | *"¿Existe una forma más eficiente o legible de hacer esto mismo?"* |
+| **No compartas datos sensibles** | Nunca pegues datos personales o confidenciales en un prompt público. |
+
+> ⚠️ **Aviso:** Entregar trabajo generado por IA sin crédito ni comprensión propia se considera deshonestidad académica, igual que copiar de otra persona.
+
+---
+
+## 📊 Política de visualización de datos
+
+El diseño de las gráficas **se evalúa**. Los notebooks de este repositorio muestran visualizaciones deliberadamente simples —escala de grises, estilo base de ggplot2— para que cada persona participante las mejore desde cero.
+
+### 🚫 Está estrictamente prohibido entregar:
+
+- **Pasteles** (*pie charts*)
+- **Donas** (*donut charts*)
+- **Cualquier gráfica circular** de cualquier variante
+
+Estas formas son cognitivamente ineficientes para comparar proporciones y están [ampliamente desaconsejadas](https://www.data-to-viz.com/caveat/pie.html) en la literatura de visualización de datos.
+
+### ✅ Se evaluará positivamente:
+
+- Elección apropiada del tipo de gráfica para los datos
+- Uso coherente y accesible del color
+- Títulos, subtítulos, etiquetas de ejes y nota de fuente presentes
+- Jerarquía visual clara y tipografía cuidada
+- Buen gusto: menos es más
+
+> 💬 *"A chart is only as good as the thinking behind it."* — Edward Tufte
 
 ---
 

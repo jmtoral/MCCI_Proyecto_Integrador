@@ -269,14 +269,14 @@ if (nrow(nas_montos) == 0) {
 #| label: fig-por-ano
 #| fig-cap: "Número de contratos registrados por año en ambos datasets"
 
+# TODO (personas estudiantes): mejora el diseño de esta gráfica.
+# Considera: paleta de colores accesible, tipografía, etiquetas de valor, etc.
 bind_rows(
   contratos        |> count(ano) |> mutate(dataset = "contratos.csv"),
   contratos_montos |> count(ano) |> mutate(dataset = "contratos_montos.csv")
 ) |>
   ggplot(aes(x = factor(ano), y = n, fill = dataset)) +
-  geom_col(position = "dodge", alpha = 0.85) +
-  scale_fill_manual(values = c("contratos.csv" = "#2196F3",
-                               "contratos_montos.csv" = "#FF9800")) +
+  geom_col(position = "dodge") +
   scale_y_continuous(labels = label_comma()) +
   labs(
     title    = "Contratos por año",
@@ -284,11 +284,6 @@ bind_rows(
     x        = "Año",
     y        = "Número de contratos",
     fill     = "Dataset"
-  ) +
-  theme_minimal(base_size = 13) +
-  theme(
-    plot.title    = element_text(face = "bold"),
-    legend.position = "bottom"
   )
 ```
 
@@ -298,25 +293,19 @@ bind_rows(
 #| label: fig-tipo-contrato
 #| fig-cap: "Tipos de contrato más frecuentes en contratos_montos.csv"
 
+# TODO (personas estudiantes): mejora el diseño de esta gráfica.
 contratos_montos |>
   count(tipo_contrato, sort = TRUE) |>
   slice_max(n, n = 10) |>
   mutate(tipo_contrato = fct_reorder(tipo_contrato, n)) |>
-  ggplot(aes(x = n, y = tipo_contrato, fill = n)) +
-  geom_col(alpha = 0.85) +
-  scale_fill_gradient(low = "#B3E5FC", high = "#0277BD") +
+  ggplot(aes(x = n, y = tipo_contrato)) +
+  geom_col() +
   scale_x_continuous(labels = label_comma()) +
   labs(
     title    = "Top 10 tipos de contrato",
     subtitle = "contratos_montos.csv",
     x        = "Número de contratos",
-    y        = NULL,
-    fill     = "N"
-  ) +
-  theme_minimal(base_size = 13) +
-  theme(
-    plot.title  = element_text(face = "bold"),
-    legend.position = "none"
+    y        = NULL
   )
 ```
 
@@ -326,31 +315,25 @@ contratos_montos |>
 #| label: fig-monto-partido
 #| fig-cap: "Monto total de contratos por partido político (contratos_montos.csv)"
 
+# TODO (personas estudiantes): mejora el diseño de esta gráfica.
+# Tip: considera usar los colores institucionales de cada partido.
 contratos_montos |>
   filter(costo > 0) |>
   group_by(partido) |>
   summarise(
-    total_contratos = n(),
-    monto_total     = sum(costo, na.rm = TRUE),
-    .groups         = "drop"
+    monto_total = sum(costo, na.rm = TRUE),
+    .groups     = "drop"
   ) |>
-  arrange(desc(monto_total)) |>
   mutate(partido = fct_reorder(partido, monto_total)) |>
   ggplot(aes(x = monto_total, y = partido)) +
-  geom_col(aes(fill = partido), alpha = 0.85, show.legend = FALSE) +
-  scale_x_continuous(labels = label_dollar(prefix = "$", suffix = " MXN",
-                                           scale = 1e-6,
-                                           suffix_after = FALSE,
-                                           big.mark = ","),
+  geom_col() +
+  scale_x_continuous(labels = label_dollar(scale = 1e-6, big.mark = ","),
                      name = "Monto total (millones de MXN)") +
-  scale_fill_manual(values = paleta_partidos, na.value = "#9E9E9E") +
   labs(
     title    = "Monto total de contratos por partido político",
     subtitle = "Solo contratos con costo > 0 | contratos_montos.csv",
     y        = NULL
-  ) +
-  theme_minimal(base_size = 13) +
-  theme(plot.title = element_text(face = "bold"))
+  )
 ```
 
 ### Distribución del monto de contratos
@@ -359,10 +342,11 @@ contratos_montos |>
 #| label: fig-distribucion-costo
 #| fig-cap: "Distribución del logaritmo del costo de contratos (sin valores cero)"
 
+# TODO (personas estudiantes): mejora el diseño de esta gráfica.
 contratos_montos |>
   filter(costo > 0) |>
   ggplot(aes(x = log10(costo))) +
-  geom_histogram(bins = 50, fill = "#1565C0", alpha = 0.8, color = "white") +
+  geom_histogram(bins = 50) +
   scale_x_continuous(
     breaks = 3:10,
     labels = c("$1K", "$10K", "$100K", "$1M", "$10M", "$100M", "$1B", "$10B")
@@ -373,9 +357,7 @@ contratos_montos |>
     subtitle = "contratos_montos.csv — excluye contratos con costo = $0",
     x        = "Monto del contrato",
     y        = "Frecuencia"
-  ) +
-  theme_minimal(base_size = 13) +
-  theme(plot.title = element_text(face = "bold"))
+  )
 ```
 
 ---
