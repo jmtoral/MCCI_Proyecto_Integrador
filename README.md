@@ -221,6 +221,95 @@ Estas formas son cognitivamente ineficientes para comparar proporciones y están
 
 ---
 
+## 🤖 Ideas de proyectos con Machine Learning
+
+Estos datos ofrecen un terreno fértil para aplicar técnicas de ML de nivel introductorio. A continuación encontrarás ideas organizadas por tipo de problema, de menor a mayor complejidad.
+
+> 💡 Recuerda: el valor de un buen proyecto de ML no está solo en el modelo, sino en la **pregunta que responde** y en qué tan bien puedes explicar e interpretar los resultados.
+
+---
+
+### 📦 Clasificación
+
+| Proyecto | Variable objetivo | Features sugeridas | Algoritmo de entrada |
+|---|---|---|---|
+| **¿Persona física o moral?** | `tipo_persona` | `costo`, `tipo_contrato`, `partido`, `ano` | Regresión logística, árbol de decisión |
+| **¿Qué partido firmó este contrato?** | `partido` | `costo`, `tipo_contrato`, `tipo_persona`, `area`, `ano` | Random Forest, KNN |
+| **¿Adquisición o prestación de servicio?** | `tipo_contrato` (binarizado) | `costo`, `tipo_persona`, `partido`, `duracion_dias` | Regresión logística |
+| **¿Contrato de alto valor?** | `costo > mediana` (variable nueva) | `tipo_contrato`, `partido`, `tipo_persona`, `mes_firma` | Árbol de decisión, Naive Bayes |
+
+**Nota metodológica:** Antes de modelar, discute con tu equipo si el modelo tiene riesgo de aprender sesgos de los datos (p. ej., ¿es justo predecir el partido a partir del monto?).
+
+---
+
+### 📈 Regresión
+
+| Proyecto | Variable objetivo | Features sugeridas | Algoritmo de entrada |
+|---|---|---|---|
+| **Predicción del monto del contrato** | `costo` (log) | `tipo_contrato`, `partido`, `tipo_persona`, `ano`, `duracion_dias` | Regresión lineal, Ridge/Lasso |
+| **Duración del contrato** | `fecha_fin_vigencia - fecha_inicio_vigencia` | `costo`, `tipo_contrato`, `partido`, `ano` | Regresión lineal |
+
+**Ojo:** `costo` tiene una distribución muy sesgada; aplica `log()` antes de modelar y reporta el RMSE en escala original.
+
+---
+
+### 🔍 Clustering (aprendizaje no supervisado)
+
+| Proyecto | Descripción | Algoritmo de entrada |
+|---|---|---|
+| **Perfiles de proveedores** | Agrupa proveedores según número de contratos, monto total y partidos con los que trabajan | K-Means, clustering jerárquico |
+| **Perfiles de partidos** | Agrupa partidos según sus patrones de contratación (tipos, montos, proveedores frecuentes) | K-Means |
+| **Detección de anomalías** | Identifica contratos con combinaciones inusuales de monto, duración y tipo | Isolation Forest, DBSCAN |
+
+---
+
+### 🔤 Procesamiento de Lenguaje Natural (NLP) — nivel básico
+
+La columna `descripcion` contiene texto libre con el objeto de cada contrato. Algunas ideas:
+
+| Proyecto | Técnica |
+|---|---|
+| **Clasificar contratos por tema usando la descripción** | TF-IDF + clasificador | 
+| **Palabras más frecuentes por partido** | Nube de palabras, n-gramas |
+| **¿Qué tipos de servicios contrata cada partido?** | Topic modeling (LDA) |
+
+---
+
+### 🛠️ Ingeniería de features sugerida
+
+Antes de modelar, considera crear estas variables derivadas que pueden mejorar cualquier modelo:
+
+```r
+montos <- montos |>
+  mutate(
+    # Duración del contrato en días
+    duracion_dias = as.numeric(fecha_fin_vigencia - fecha_inicio_vigencia),
+
+    # Mes de firma (estacionalidad)
+    mes_firma = month(fecha_firma),
+
+    # ¿Es fin de año? (los gobiernos suelen contratar más en dic)
+    es_diciembre = month(fecha_firma) == 12,
+
+    # Logaritmo del costo (para modelos de regresión)
+    log_costo = log1p(costo),
+
+    # ¿Contrato de alto valor? (por encima de la mediana)
+    alto_valor = costo > median(costo, na.rm = TRUE)
+  )
+```
+
+---
+
+### ⚠️ Advertencias éticas para proyectos de ML con estos datos
+
+1. **Causalidad ≠ correlación.** Que un modelo prediga el partido a partir del monto no significa que el partido *cause* los montos altos.
+2. **Los modelos pueden amplificar sesgos** presentes en los datos históricos.
+3. **Interpreta siempre tus modelos.** Un modelo que no puedes explicar no es útil en contextos de política pública.
+4. **Reporta métricas de evaluación apropiadas** (accuracy, F1, AUC, RMSE según el caso) y discute qué significa cada una.
+
+---
+
 ## 🤝 Créditos
 
 Datos proporcionados por **Mexicanos Contra la Corrupción y la Impunidad (MCCI)**.  
