@@ -130,7 +130,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="../notebooks/01_exploracion.html" aria-current="page"> 
-<span class="menu-text">Exploración de Datos</span></a>
+<span class="menu-text">Exploración general</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../notebooks/02_contratos_montos.html"> 
+<span class="menu-text">Análisis contratos_montos</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../referencias/diccionario_datos.html"> 
@@ -277,23 +281,23 @@ Nota
 <span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div id="mtysdpxmof" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#mtysdpxmof table {
+<div id="dbbtxtqblm" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#dbbtxtqblm table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#mtysdpxmof thead, #mtysdpxmof tbody, #mtysdpxmof tfoot, #mtysdpxmof tr, #mtysdpxmof td, #mtysdpxmof th {
+#dbbtxtqblm thead, #dbbtxtqblm tbody, #dbbtxtqblm tfoot, #dbbtxtqblm tr, #dbbtxtqblm td, #dbbtxtqblm th {
   border-style: none;
 }
 
-#mtysdpxmof p {
+#dbbtxtqblm p {
   margin: 0;
   padding: 0;
 }
 
-#mtysdpxmof .gt_table {
+#dbbtxtqblm .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -319,12 +323,12 @@ Nota
   border-left-color: #D3D3D3;
 }
 
-#mtysdpxmof .gt_caption {
+#dbbtxtqblm .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#mtysdpxmof .gt_title {
+#dbbtxtqblm .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -336,7 +340,7 @@ Nota
   border-bottom-width: 0;
 }
 
-#mtysdpxmof .gt_subtitle {
+#dbbtxtqblm .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -348,7 +352,7 @@ Nota
   border-top-width: 0;
 }
 
-#mtysdpxmof .gt_heading {
+#dbbtxtqblm .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -360,13 +364,13 @@ Nota
   border-right-color: #D3D3D3;
 }
 
-#mtysdpxmof .gt_bottom_border {
+#dbbtxtqblm .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#mtysdpxmof .gt_col_headings {
+#dbbtxtqblm .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -381,7 +385,7 @@ Nota
   border-right-color: #D3D3D3;
 }
 
-#mtysdpxmof .gt_col_heading {
+#dbbtxtqblm .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -401,7 +405,7 @@ Nota
   overflow-x: hidden;
 }
 
-#mtysdpxmof .gt_column_spanner_outer {
+#dbbtxtqblm .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -413,15 +417,15 @@ Nota
   padding-right: 4px;
 }
 
-#mtysdpxmof .gt_column_spanner_outer:first-child {
+#dbbtxtqblm .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#mtysdpxmof .gt_column_spanner_outer:last-child {
+#dbbtxtqblm .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#mtysdpxmof .gt_column_spanner {
+#dbbtxtqblm .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -433,11 +437,11 @@ Nota
   width: 100%;
 }
 
-#mtysdpxmof .gt_spanner_row {
+#dbbtxtqblm .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#mtysdpxmof .gt_group_heading {
+#dbbtxtqblm .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -463,7 +467,7 @@ Nota
   text-align: left;
 }
 
-#mtysdpxmof .gt_empty_group_heading {
+#dbbtxtqblm .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -478,15 +482,15 @@ Nota
   vertical-align: middle;
 }
 
-#mtysdpxmof .gt_from_md > :first-child {
+#dbbtxtqblm .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#mtysdpxmof .gt_from_md > :last-child {
+#dbbtxtqblm .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#mtysdpxmof .gt_row {
+#dbbtxtqblm .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -505,7 +509,7 @@ Nota
   overflow-x: hidden;
 }
 
-#mtysdpxmof .gt_stub {
+#dbbtxtqblm .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -518,7 +522,7 @@ Nota
   padding-right: 5px;
 }
 
-#mtysdpxmof .gt_stub_row_group {
+#dbbtxtqblm .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -532,15 +536,15 @@ Nota
   vertical-align: top;
 }
 
-#mtysdpxmof .gt_row_group_first td {
+#dbbtxtqblm .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#mtysdpxmof .gt_row_group_first th {
+#dbbtxtqblm .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#mtysdpxmof .gt_summary_row {
+#dbbtxtqblm .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -550,16 +554,16 @@ Nota
   padding-right: 5px;
 }
 
-#mtysdpxmof .gt_first_summary_row {
+#dbbtxtqblm .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#mtysdpxmof .gt_first_summary_row.thick {
+#dbbtxtqblm .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#mtysdpxmof .gt_last_summary_row {
+#dbbtxtqblm .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -569,7 +573,7 @@ Nota
   border-bottom-color: #D3D3D3;
 }
 
-#mtysdpxmof .gt_grand_summary_row {
+#dbbtxtqblm .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -579,7 +583,7 @@ Nota
   padding-right: 5px;
 }
 
-#mtysdpxmof .gt_first_grand_summary_row {
+#dbbtxtqblm .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -589,7 +593,7 @@ Nota
   border-top-color: #D3D3D3;
 }
 
-#mtysdpxmof .gt_last_grand_summary_row_top {
+#dbbtxtqblm .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -599,11 +603,11 @@ Nota
   border-bottom-color: #D3D3D3;
 }
 
-#mtysdpxmof .gt_striped {
+#dbbtxtqblm .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#mtysdpxmof .gt_table_body {
+#dbbtxtqblm .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -612,7 +616,7 @@ Nota
   border-bottom-color: #D3D3D3;
 }
 
-#mtysdpxmof .gt_footnotes {
+#dbbtxtqblm .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -626,7 +630,7 @@ Nota
   border-right-color: #D3D3D3;
 }
 
-#mtysdpxmof .gt_footnote {
+#dbbtxtqblm .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -635,7 +639,7 @@ Nota
   padding-right: 5px;
 }
 
-#mtysdpxmof .gt_sourcenotes {
+#dbbtxtqblm .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -649,7 +653,7 @@ Nota
   border-right-color: #D3D3D3;
 }
 
-#mtysdpxmof .gt_sourcenote {
+#dbbtxtqblm .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -657,72 +661,72 @@ Nota
   padding-right: 5px;
 }
 
-#mtysdpxmof .gt_left {
+#dbbtxtqblm .gt_left {
   text-align: left;
 }
 
-#mtysdpxmof .gt_center {
+#dbbtxtqblm .gt_center {
   text-align: center;
 }
 
-#mtysdpxmof .gt_right {
+#dbbtxtqblm .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#mtysdpxmof .gt_font_normal {
+#dbbtxtqblm .gt_font_normal {
   font-weight: normal;
 }
 
-#mtysdpxmof .gt_font_bold {
+#dbbtxtqblm .gt_font_bold {
   font-weight: bold;
 }
 
-#mtysdpxmof .gt_font_italic {
+#dbbtxtqblm .gt_font_italic {
   font-style: italic;
 }
 
-#mtysdpxmof .gt_super {
+#dbbtxtqblm .gt_super {
   font-size: 65%;
 }
 
-#mtysdpxmof .gt_footnote_marks {
+#dbbtxtqblm .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#mtysdpxmof .gt_asterisk {
+#dbbtxtqblm .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#mtysdpxmof .gt_indent_1 {
+#dbbtxtqblm .gt_indent_1 {
   text-indent: 5px;
 }
 
-#mtysdpxmof .gt_indent_2 {
+#dbbtxtqblm .gt_indent_2 {
   text-indent: 10px;
 }
 
-#mtysdpxmof .gt_indent_3 {
+#dbbtxtqblm .gt_indent_3 {
   text-indent: 15px;
 }
 
-#mtysdpxmof .gt_indent_4 {
+#dbbtxtqblm .gt_indent_4 {
   text-indent: 20px;
 }
 
-#mtysdpxmof .gt_indent_5 {
+#dbbtxtqblm .gt_indent_5 {
   text-indent: 25px;
 }
 
-#mtysdpxmof .katex-display {
+#dbbtxtqblm .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#mtysdpxmof div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#dbbtxtqblm div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -819,23 +823,23 @@ Nota
 <span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div id="xtpdeyyuqc" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#xtpdeyyuqc table {
+<div id="xuodezbifj" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#xuodezbifj table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#xtpdeyyuqc thead, #xtpdeyyuqc tbody, #xtpdeyyuqc tfoot, #xtpdeyyuqc tr, #xtpdeyyuqc td, #xtpdeyyuqc th {
+#xuodezbifj thead, #xuodezbifj tbody, #xuodezbifj tfoot, #xuodezbifj tr, #xuodezbifj td, #xuodezbifj th {
   border-style: none;
 }
 
-#xtpdeyyuqc p {
+#xuodezbifj p {
   margin: 0;
   padding: 0;
 }
 
-#xtpdeyyuqc .gt_table {
+#xuodezbifj .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -861,12 +865,12 @@ Nota
   border-left-color: #D3D3D3;
 }
 
-#xtpdeyyuqc .gt_caption {
+#xuodezbifj .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#xtpdeyyuqc .gt_title {
+#xuodezbifj .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -878,7 +882,7 @@ Nota
   border-bottom-width: 0;
 }
 
-#xtpdeyyuqc .gt_subtitle {
+#xuodezbifj .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -890,7 +894,7 @@ Nota
   border-top-width: 0;
 }
 
-#xtpdeyyuqc .gt_heading {
+#xuodezbifj .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -902,13 +906,13 @@ Nota
   border-right-color: #D3D3D3;
 }
 
-#xtpdeyyuqc .gt_bottom_border {
+#xuodezbifj .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#xtpdeyyuqc .gt_col_headings {
+#xuodezbifj .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -923,7 +927,7 @@ Nota
   border-right-color: #D3D3D3;
 }
 
-#xtpdeyyuqc .gt_col_heading {
+#xuodezbifj .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -943,7 +947,7 @@ Nota
   overflow-x: hidden;
 }
 
-#xtpdeyyuqc .gt_column_spanner_outer {
+#xuodezbifj .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -955,15 +959,15 @@ Nota
   padding-right: 4px;
 }
 
-#xtpdeyyuqc .gt_column_spanner_outer:first-child {
+#xuodezbifj .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#xtpdeyyuqc .gt_column_spanner_outer:last-child {
+#xuodezbifj .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#xtpdeyyuqc .gt_column_spanner {
+#xuodezbifj .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -975,11 +979,11 @@ Nota
   width: 100%;
 }
 
-#xtpdeyyuqc .gt_spanner_row {
+#xuodezbifj .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#xtpdeyyuqc .gt_group_heading {
+#xuodezbifj .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1005,7 +1009,7 @@ Nota
   text-align: left;
 }
 
-#xtpdeyyuqc .gt_empty_group_heading {
+#xuodezbifj .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1020,15 +1024,15 @@ Nota
   vertical-align: middle;
 }
 
-#xtpdeyyuqc .gt_from_md > :first-child {
+#xuodezbifj .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#xtpdeyyuqc .gt_from_md > :last-child {
+#xuodezbifj .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#xtpdeyyuqc .gt_row {
+#xuodezbifj .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1047,7 +1051,7 @@ Nota
   overflow-x: hidden;
 }
 
-#xtpdeyyuqc .gt_stub {
+#xuodezbifj .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1060,7 +1064,7 @@ Nota
   padding-right: 5px;
 }
 
-#xtpdeyyuqc .gt_stub_row_group {
+#xuodezbifj .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1074,15 +1078,15 @@ Nota
   vertical-align: top;
 }
 
-#xtpdeyyuqc .gt_row_group_first td {
+#xuodezbifj .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#xtpdeyyuqc .gt_row_group_first th {
+#xuodezbifj .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#xtpdeyyuqc .gt_summary_row {
+#xuodezbifj .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1092,16 +1096,16 @@ Nota
   padding-right: 5px;
 }
 
-#xtpdeyyuqc .gt_first_summary_row {
+#xuodezbifj .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#xtpdeyyuqc .gt_first_summary_row.thick {
+#xuodezbifj .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#xtpdeyyuqc .gt_last_summary_row {
+#xuodezbifj .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1111,7 +1115,7 @@ Nota
   border-bottom-color: #D3D3D3;
 }
 
-#xtpdeyyuqc .gt_grand_summary_row {
+#xuodezbifj .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1121,7 +1125,7 @@ Nota
   padding-right: 5px;
 }
 
-#xtpdeyyuqc .gt_first_grand_summary_row {
+#xuodezbifj .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1131,7 +1135,7 @@ Nota
   border-top-color: #D3D3D3;
 }
 
-#xtpdeyyuqc .gt_last_grand_summary_row_top {
+#xuodezbifj .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1141,11 +1145,11 @@ Nota
   border-bottom-color: #D3D3D3;
 }
 
-#xtpdeyyuqc .gt_striped {
+#xuodezbifj .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#xtpdeyyuqc .gt_table_body {
+#xuodezbifj .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1154,7 +1158,7 @@ Nota
   border-bottom-color: #D3D3D3;
 }
 
-#xtpdeyyuqc .gt_footnotes {
+#xuodezbifj .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1168,7 +1172,7 @@ Nota
   border-right-color: #D3D3D3;
 }
 
-#xtpdeyyuqc .gt_footnote {
+#xuodezbifj .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1177,7 +1181,7 @@ Nota
   padding-right: 5px;
 }
 
-#xtpdeyyuqc .gt_sourcenotes {
+#xuodezbifj .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1191,7 +1195,7 @@ Nota
   border-right-color: #D3D3D3;
 }
 
-#xtpdeyyuqc .gt_sourcenote {
+#xuodezbifj .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1199,72 +1203,72 @@ Nota
   padding-right: 5px;
 }
 
-#xtpdeyyuqc .gt_left {
+#xuodezbifj .gt_left {
   text-align: left;
 }
 
-#xtpdeyyuqc .gt_center {
+#xuodezbifj .gt_center {
   text-align: center;
 }
 
-#xtpdeyyuqc .gt_right {
+#xuodezbifj .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#xtpdeyyuqc .gt_font_normal {
+#xuodezbifj .gt_font_normal {
   font-weight: normal;
 }
 
-#xtpdeyyuqc .gt_font_bold {
+#xuodezbifj .gt_font_bold {
   font-weight: bold;
 }
 
-#xtpdeyyuqc .gt_font_italic {
+#xuodezbifj .gt_font_italic {
   font-style: italic;
 }
 
-#xtpdeyyuqc .gt_super {
+#xuodezbifj .gt_super {
   font-size: 65%;
 }
 
-#xtpdeyyuqc .gt_footnote_marks {
+#xuodezbifj .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#xtpdeyyuqc .gt_asterisk {
+#xuodezbifj .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#xtpdeyyuqc .gt_indent_1 {
+#xuodezbifj .gt_indent_1 {
   text-indent: 5px;
 }
 
-#xtpdeyyuqc .gt_indent_2 {
+#xuodezbifj .gt_indent_2 {
   text-indent: 10px;
 }
 
-#xtpdeyyuqc .gt_indent_3 {
+#xuodezbifj .gt_indent_3 {
   text-indent: 15px;
 }
 
-#xtpdeyyuqc .gt_indent_4 {
+#xuodezbifj .gt_indent_4 {
   text-indent: 20px;
 }
 
-#xtpdeyyuqc .gt_indent_5 {
+#xuodezbifj .gt_indent_5 {
   text-indent: 25px;
 }
 
-#xtpdeyyuqc .katex-display {
+#xuodezbifj .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#xtpdeyyuqc div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#xuodezbifj div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1371,23 +1375,23 @@ Nota
 <span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div id="yfocnltnrn" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#yfocnltnrn table {
+<div id="dkrpolilbl" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#dkrpolilbl table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#yfocnltnrn thead, #yfocnltnrn tbody, #yfocnltnrn tfoot, #yfocnltnrn tr, #yfocnltnrn td, #yfocnltnrn th {
+#dkrpolilbl thead, #dkrpolilbl tbody, #dkrpolilbl tfoot, #dkrpolilbl tr, #dkrpolilbl td, #dkrpolilbl th {
   border-style: none;
 }
 
-#yfocnltnrn p {
+#dkrpolilbl p {
   margin: 0;
   padding: 0;
 }
 
-#yfocnltnrn .gt_table {
+#dkrpolilbl .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1413,12 +1417,12 @@ Nota
   border-left-color: #D3D3D3;
 }
 
-#yfocnltnrn .gt_caption {
+#dkrpolilbl .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#yfocnltnrn .gt_title {
+#dkrpolilbl .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1430,7 +1434,7 @@ Nota
   border-bottom-width: 0;
 }
 
-#yfocnltnrn .gt_subtitle {
+#dkrpolilbl .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1442,7 +1446,7 @@ Nota
   border-top-width: 0;
 }
 
-#yfocnltnrn .gt_heading {
+#dkrpolilbl .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1454,13 +1458,13 @@ Nota
   border-right-color: #D3D3D3;
 }
 
-#yfocnltnrn .gt_bottom_border {
+#dkrpolilbl .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#yfocnltnrn .gt_col_headings {
+#dkrpolilbl .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1475,7 +1479,7 @@ Nota
   border-right-color: #D3D3D3;
 }
 
-#yfocnltnrn .gt_col_heading {
+#dkrpolilbl .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1495,7 +1499,7 @@ Nota
   overflow-x: hidden;
 }
 
-#yfocnltnrn .gt_column_spanner_outer {
+#dkrpolilbl .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1507,15 +1511,15 @@ Nota
   padding-right: 4px;
 }
 
-#yfocnltnrn .gt_column_spanner_outer:first-child {
+#dkrpolilbl .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#yfocnltnrn .gt_column_spanner_outer:last-child {
+#dkrpolilbl .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#yfocnltnrn .gt_column_spanner {
+#dkrpolilbl .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1527,11 +1531,11 @@ Nota
   width: 100%;
 }
 
-#yfocnltnrn .gt_spanner_row {
+#dkrpolilbl .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#yfocnltnrn .gt_group_heading {
+#dkrpolilbl .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1557,7 +1561,7 @@ Nota
   text-align: left;
 }
 
-#yfocnltnrn .gt_empty_group_heading {
+#dkrpolilbl .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1572,15 +1576,15 @@ Nota
   vertical-align: middle;
 }
 
-#yfocnltnrn .gt_from_md > :first-child {
+#dkrpolilbl .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#yfocnltnrn .gt_from_md > :last-child {
+#dkrpolilbl .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#yfocnltnrn .gt_row {
+#dkrpolilbl .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1599,7 +1603,7 @@ Nota
   overflow-x: hidden;
 }
 
-#yfocnltnrn .gt_stub {
+#dkrpolilbl .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1612,7 +1616,7 @@ Nota
   padding-right: 5px;
 }
 
-#yfocnltnrn .gt_stub_row_group {
+#dkrpolilbl .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1626,15 +1630,15 @@ Nota
   vertical-align: top;
 }
 
-#yfocnltnrn .gt_row_group_first td {
+#dkrpolilbl .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#yfocnltnrn .gt_row_group_first th {
+#dkrpolilbl .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#yfocnltnrn .gt_summary_row {
+#dkrpolilbl .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1644,16 +1648,16 @@ Nota
   padding-right: 5px;
 }
 
-#yfocnltnrn .gt_first_summary_row {
+#dkrpolilbl .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#yfocnltnrn .gt_first_summary_row.thick {
+#dkrpolilbl .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#yfocnltnrn .gt_last_summary_row {
+#dkrpolilbl .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1663,7 +1667,7 @@ Nota
   border-bottom-color: #D3D3D3;
 }
 
-#yfocnltnrn .gt_grand_summary_row {
+#dkrpolilbl .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1673,7 +1677,7 @@ Nota
   padding-right: 5px;
 }
 
-#yfocnltnrn .gt_first_grand_summary_row {
+#dkrpolilbl .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1683,7 +1687,7 @@ Nota
   border-top-color: #D3D3D3;
 }
 
-#yfocnltnrn .gt_last_grand_summary_row_top {
+#dkrpolilbl .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1693,11 +1697,11 @@ Nota
   border-bottom-color: #D3D3D3;
 }
 
-#yfocnltnrn .gt_striped {
+#dkrpolilbl .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#yfocnltnrn .gt_table_body {
+#dkrpolilbl .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1706,7 +1710,7 @@ Nota
   border-bottom-color: #D3D3D3;
 }
 
-#yfocnltnrn .gt_footnotes {
+#dkrpolilbl .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1720,7 +1724,7 @@ Nota
   border-right-color: #D3D3D3;
 }
 
-#yfocnltnrn .gt_footnote {
+#dkrpolilbl .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1729,7 +1733,7 @@ Nota
   padding-right: 5px;
 }
 
-#yfocnltnrn .gt_sourcenotes {
+#dkrpolilbl .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1743,7 +1747,7 @@ Nota
   border-right-color: #D3D3D3;
 }
 
-#yfocnltnrn .gt_sourcenote {
+#dkrpolilbl .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1751,72 +1755,72 @@ Nota
   padding-right: 5px;
 }
 
-#yfocnltnrn .gt_left {
+#dkrpolilbl .gt_left {
   text-align: left;
 }
 
-#yfocnltnrn .gt_center {
+#dkrpolilbl .gt_center {
   text-align: center;
 }
 
-#yfocnltnrn .gt_right {
+#dkrpolilbl .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#yfocnltnrn .gt_font_normal {
+#dkrpolilbl .gt_font_normal {
   font-weight: normal;
 }
 
-#yfocnltnrn .gt_font_bold {
+#dkrpolilbl .gt_font_bold {
   font-weight: bold;
 }
 
-#yfocnltnrn .gt_font_italic {
+#dkrpolilbl .gt_font_italic {
   font-style: italic;
 }
 
-#yfocnltnrn .gt_super {
+#dkrpolilbl .gt_super {
   font-size: 65%;
 }
 
-#yfocnltnrn .gt_footnote_marks {
+#dkrpolilbl .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#yfocnltnrn .gt_asterisk {
+#dkrpolilbl .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#yfocnltnrn .gt_indent_1 {
+#dkrpolilbl .gt_indent_1 {
   text-indent: 5px;
 }
 
-#yfocnltnrn .gt_indent_2 {
+#dkrpolilbl .gt_indent_2 {
   text-indent: 10px;
 }
 
-#yfocnltnrn .gt_indent_3 {
+#dkrpolilbl .gt_indent_3 {
   text-indent: 15px;
 }
 
-#yfocnltnrn .gt_indent_4 {
+#dkrpolilbl .gt_indent_4 {
   text-indent: 20px;
 }
 
-#yfocnltnrn .gt_indent_5 {
+#dkrpolilbl .gt_indent_5 {
   text-indent: 25px;
 }
 
-#yfocnltnrn .katex-display {
+#dkrpolilbl .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#yfocnltnrn div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#dkrpolilbl div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1888,23 +1892,23 @@ Columnas en común : 28</code></pre>
 <span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div id="caxqfjcnhk" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#caxqfjcnhk table {
+<div id="pllaeeuftv" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#pllaeeuftv table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#caxqfjcnhk thead, #caxqfjcnhk tbody, #caxqfjcnhk tfoot, #caxqfjcnhk tr, #caxqfjcnhk td, #caxqfjcnhk th {
+#pllaeeuftv thead, #pllaeeuftv tbody, #pllaeeuftv tfoot, #pllaeeuftv tr, #pllaeeuftv td, #pllaeeuftv th {
   border-style: none;
 }
 
-#caxqfjcnhk p {
+#pllaeeuftv p {
   margin: 0;
   padding: 0;
 }
 
-#caxqfjcnhk .gt_table {
+#pllaeeuftv .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1930,12 +1934,12 @@ Columnas en común : 28</code></pre>
   border-left-color: #D3D3D3;
 }
 
-#caxqfjcnhk .gt_caption {
+#pllaeeuftv .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#caxqfjcnhk .gt_title {
+#pllaeeuftv .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1947,7 +1951,7 @@ Columnas en común : 28</code></pre>
   border-bottom-width: 0;
 }
 
-#caxqfjcnhk .gt_subtitle {
+#pllaeeuftv .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1959,7 +1963,7 @@ Columnas en común : 28</code></pre>
   border-top-width: 0;
 }
 
-#caxqfjcnhk .gt_heading {
+#pllaeeuftv .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1971,13 +1975,13 @@ Columnas en común : 28</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#caxqfjcnhk .gt_bottom_border {
+#pllaeeuftv .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#caxqfjcnhk .gt_col_headings {
+#pllaeeuftv .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1992,7 +1996,7 @@ Columnas en común : 28</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#caxqfjcnhk .gt_col_heading {
+#pllaeeuftv .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2012,7 +2016,7 @@ Columnas en común : 28</code></pre>
   overflow-x: hidden;
 }
 
-#caxqfjcnhk .gt_column_spanner_outer {
+#pllaeeuftv .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2024,15 +2028,15 @@ Columnas en común : 28</code></pre>
   padding-right: 4px;
 }
 
-#caxqfjcnhk .gt_column_spanner_outer:first-child {
+#pllaeeuftv .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#caxqfjcnhk .gt_column_spanner_outer:last-child {
+#pllaeeuftv .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#caxqfjcnhk .gt_column_spanner {
+#pllaeeuftv .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2044,11 +2048,11 @@ Columnas en común : 28</code></pre>
   width: 100%;
 }
 
-#caxqfjcnhk .gt_spanner_row {
+#pllaeeuftv .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#caxqfjcnhk .gt_group_heading {
+#pllaeeuftv .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2074,7 +2078,7 @@ Columnas en común : 28</code></pre>
   text-align: left;
 }
 
-#caxqfjcnhk .gt_empty_group_heading {
+#pllaeeuftv .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2089,15 +2093,15 @@ Columnas en común : 28</code></pre>
   vertical-align: middle;
 }
 
-#caxqfjcnhk .gt_from_md > :first-child {
+#pllaeeuftv .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#caxqfjcnhk .gt_from_md > :last-child {
+#pllaeeuftv .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#caxqfjcnhk .gt_row {
+#pllaeeuftv .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2116,7 +2120,7 @@ Columnas en común : 28</code></pre>
   overflow-x: hidden;
 }
 
-#caxqfjcnhk .gt_stub {
+#pllaeeuftv .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2129,7 +2133,7 @@ Columnas en común : 28</code></pre>
   padding-right: 5px;
 }
 
-#caxqfjcnhk .gt_stub_row_group {
+#pllaeeuftv .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2143,15 +2147,15 @@ Columnas en común : 28</code></pre>
   vertical-align: top;
 }
 
-#caxqfjcnhk .gt_row_group_first td {
+#pllaeeuftv .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#caxqfjcnhk .gt_row_group_first th {
+#pllaeeuftv .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#caxqfjcnhk .gt_summary_row {
+#pllaeeuftv .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2161,16 +2165,16 @@ Columnas en común : 28</code></pre>
   padding-right: 5px;
 }
 
-#caxqfjcnhk .gt_first_summary_row {
+#pllaeeuftv .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#caxqfjcnhk .gt_first_summary_row.thick {
+#pllaeeuftv .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#caxqfjcnhk .gt_last_summary_row {
+#pllaeeuftv .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2180,7 +2184,7 @@ Columnas en común : 28</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#caxqfjcnhk .gt_grand_summary_row {
+#pllaeeuftv .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2190,7 +2194,7 @@ Columnas en común : 28</code></pre>
   padding-right: 5px;
 }
 
-#caxqfjcnhk .gt_first_grand_summary_row {
+#pllaeeuftv .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2200,7 +2204,7 @@ Columnas en común : 28</code></pre>
   border-top-color: #D3D3D3;
 }
 
-#caxqfjcnhk .gt_last_grand_summary_row_top {
+#pllaeeuftv .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2210,11 +2214,11 @@ Columnas en común : 28</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#caxqfjcnhk .gt_striped {
+#pllaeeuftv .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#caxqfjcnhk .gt_table_body {
+#pllaeeuftv .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2223,7 +2227,7 @@ Columnas en común : 28</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#caxqfjcnhk .gt_footnotes {
+#pllaeeuftv .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2237,7 +2241,7 @@ Columnas en común : 28</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#caxqfjcnhk .gt_footnote {
+#pllaeeuftv .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2246,7 +2250,7 @@ Columnas en común : 28</code></pre>
   padding-right: 5px;
 }
 
-#caxqfjcnhk .gt_sourcenotes {
+#pllaeeuftv .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2260,7 +2264,7 @@ Columnas en común : 28</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#caxqfjcnhk .gt_sourcenote {
+#pllaeeuftv .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2268,72 +2272,72 @@ Columnas en común : 28</code></pre>
   padding-right: 5px;
 }
 
-#caxqfjcnhk .gt_left {
+#pllaeeuftv .gt_left {
   text-align: left;
 }
 
-#caxqfjcnhk .gt_center {
+#pllaeeuftv .gt_center {
   text-align: center;
 }
 
-#caxqfjcnhk .gt_right {
+#pllaeeuftv .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#caxqfjcnhk .gt_font_normal {
+#pllaeeuftv .gt_font_normal {
   font-weight: normal;
 }
 
-#caxqfjcnhk .gt_font_bold {
+#pllaeeuftv .gt_font_bold {
   font-weight: bold;
 }
 
-#caxqfjcnhk .gt_font_italic {
+#pllaeeuftv .gt_font_italic {
   font-style: italic;
 }
 
-#caxqfjcnhk .gt_super {
+#pllaeeuftv .gt_super {
   font-size: 65%;
 }
 
-#caxqfjcnhk .gt_footnote_marks {
+#pllaeeuftv .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#caxqfjcnhk .gt_asterisk {
+#pllaeeuftv .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#caxqfjcnhk .gt_indent_1 {
+#pllaeeuftv .gt_indent_1 {
   text-indent: 5px;
 }
 
-#caxqfjcnhk .gt_indent_2 {
+#pllaeeuftv .gt_indent_2 {
   text-indent: 10px;
 }
 
-#caxqfjcnhk .gt_indent_3 {
+#pllaeeuftv .gt_indent_3 {
   text-indent: 15px;
 }
 
-#caxqfjcnhk .gt_indent_4 {
+#pllaeeuftv .gt_indent_4 {
   text-indent: 20px;
 }
 
-#caxqfjcnhk .gt_indent_5 {
+#pllaeeuftv .gt_indent_5 {
   text-indent: 25px;
 }
 
-#caxqfjcnhk .katex-display {
+#pllaeeuftv .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#caxqfjcnhk div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#pllaeeuftv div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -2426,23 +2430,23 @@ Solo en 'contratos_montos' : 0</code></pre>
 <span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div id="snwlgvujqu" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#snwlgvujqu table {
+<div id="kmudqqtpmu" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#kmudqqtpmu table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#snwlgvujqu thead, #snwlgvujqu tbody, #snwlgvujqu tfoot, #snwlgvujqu tr, #snwlgvujqu td, #snwlgvujqu th {
+#kmudqqtpmu thead, #kmudqqtpmu tbody, #kmudqqtpmu tfoot, #kmudqqtpmu tr, #kmudqqtpmu td, #kmudqqtpmu th {
   border-style: none;
 }
 
-#snwlgvujqu p {
+#kmudqqtpmu p {
   margin: 0;
   padding: 0;
 }
 
-#snwlgvujqu .gt_table {
+#kmudqqtpmu .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -2468,12 +2472,12 @@ Solo en 'contratos_montos' : 0</code></pre>
   border-left-color: #D3D3D3;
 }
 
-#snwlgvujqu .gt_caption {
+#kmudqqtpmu .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#snwlgvujqu .gt_title {
+#kmudqqtpmu .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2485,7 +2489,7 @@ Solo en 'contratos_montos' : 0</code></pre>
   border-bottom-width: 0;
 }
 
-#snwlgvujqu .gt_subtitle {
+#kmudqqtpmu .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2497,7 +2501,7 @@ Solo en 'contratos_montos' : 0</code></pre>
   border-top-width: 0;
 }
 
-#snwlgvujqu .gt_heading {
+#kmudqqtpmu .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2509,13 +2513,13 @@ Solo en 'contratos_montos' : 0</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#snwlgvujqu .gt_bottom_border {
+#kmudqqtpmu .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#snwlgvujqu .gt_col_headings {
+#kmudqqtpmu .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2530,7 +2534,7 @@ Solo en 'contratos_montos' : 0</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#snwlgvujqu .gt_col_heading {
+#kmudqqtpmu .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2550,7 +2554,7 @@ Solo en 'contratos_montos' : 0</code></pre>
   overflow-x: hidden;
 }
 
-#snwlgvujqu .gt_column_spanner_outer {
+#kmudqqtpmu .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2562,15 +2566,15 @@ Solo en 'contratos_montos' : 0</code></pre>
   padding-right: 4px;
 }
 
-#snwlgvujqu .gt_column_spanner_outer:first-child {
+#kmudqqtpmu .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#snwlgvujqu .gt_column_spanner_outer:last-child {
+#kmudqqtpmu .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#snwlgvujqu .gt_column_spanner {
+#kmudqqtpmu .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2582,11 +2586,11 @@ Solo en 'contratos_montos' : 0</code></pre>
   width: 100%;
 }
 
-#snwlgvujqu .gt_spanner_row {
+#kmudqqtpmu .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#snwlgvujqu .gt_group_heading {
+#kmudqqtpmu .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2612,7 +2616,7 @@ Solo en 'contratos_montos' : 0</code></pre>
   text-align: left;
 }
 
-#snwlgvujqu .gt_empty_group_heading {
+#kmudqqtpmu .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2627,15 +2631,15 @@ Solo en 'contratos_montos' : 0</code></pre>
   vertical-align: middle;
 }
 
-#snwlgvujqu .gt_from_md > :first-child {
+#kmudqqtpmu .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#snwlgvujqu .gt_from_md > :last-child {
+#kmudqqtpmu .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#snwlgvujqu .gt_row {
+#kmudqqtpmu .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2654,7 +2658,7 @@ Solo en 'contratos_montos' : 0</code></pre>
   overflow-x: hidden;
 }
 
-#snwlgvujqu .gt_stub {
+#kmudqqtpmu .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2667,7 +2671,7 @@ Solo en 'contratos_montos' : 0</code></pre>
   padding-right: 5px;
 }
 
-#snwlgvujqu .gt_stub_row_group {
+#kmudqqtpmu .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2681,15 +2685,15 @@ Solo en 'contratos_montos' : 0</code></pre>
   vertical-align: top;
 }
 
-#snwlgvujqu .gt_row_group_first td {
+#kmudqqtpmu .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#snwlgvujqu .gt_row_group_first th {
+#kmudqqtpmu .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#snwlgvujqu .gt_summary_row {
+#kmudqqtpmu .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2699,16 +2703,16 @@ Solo en 'contratos_montos' : 0</code></pre>
   padding-right: 5px;
 }
 
-#snwlgvujqu .gt_first_summary_row {
+#kmudqqtpmu .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#snwlgvujqu .gt_first_summary_row.thick {
+#kmudqqtpmu .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#snwlgvujqu .gt_last_summary_row {
+#kmudqqtpmu .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2718,7 +2722,7 @@ Solo en 'contratos_montos' : 0</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#snwlgvujqu .gt_grand_summary_row {
+#kmudqqtpmu .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2728,7 +2732,7 @@ Solo en 'contratos_montos' : 0</code></pre>
   padding-right: 5px;
 }
 
-#snwlgvujqu .gt_first_grand_summary_row {
+#kmudqqtpmu .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2738,7 +2742,7 @@ Solo en 'contratos_montos' : 0</code></pre>
   border-top-color: #D3D3D3;
 }
 
-#snwlgvujqu .gt_last_grand_summary_row_top {
+#kmudqqtpmu .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2748,11 +2752,11 @@ Solo en 'contratos_montos' : 0</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#snwlgvujqu .gt_striped {
+#kmudqqtpmu .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#snwlgvujqu .gt_table_body {
+#kmudqqtpmu .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2761,7 +2765,7 @@ Solo en 'contratos_montos' : 0</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#snwlgvujqu .gt_footnotes {
+#kmudqqtpmu .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2775,7 +2779,7 @@ Solo en 'contratos_montos' : 0</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#snwlgvujqu .gt_footnote {
+#kmudqqtpmu .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2784,7 +2788,7 @@ Solo en 'contratos_montos' : 0</code></pre>
   padding-right: 5px;
 }
 
-#snwlgvujqu .gt_sourcenotes {
+#kmudqqtpmu .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2798,7 +2802,7 @@ Solo en 'contratos_montos' : 0</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#snwlgvujqu .gt_sourcenote {
+#kmudqqtpmu .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2806,72 +2810,72 @@ Solo en 'contratos_montos' : 0</code></pre>
   padding-right: 5px;
 }
 
-#snwlgvujqu .gt_left {
+#kmudqqtpmu .gt_left {
   text-align: left;
 }
 
-#snwlgvujqu .gt_center {
+#kmudqqtpmu .gt_center {
   text-align: center;
 }
 
-#snwlgvujqu .gt_right {
+#kmudqqtpmu .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#snwlgvujqu .gt_font_normal {
+#kmudqqtpmu .gt_font_normal {
   font-weight: normal;
 }
 
-#snwlgvujqu .gt_font_bold {
+#kmudqqtpmu .gt_font_bold {
   font-weight: bold;
 }
 
-#snwlgvujqu .gt_font_italic {
+#kmudqqtpmu .gt_font_italic {
   font-style: italic;
 }
 
-#snwlgvujqu .gt_super {
+#kmudqqtpmu .gt_super {
   font-size: 65%;
 }
 
-#snwlgvujqu .gt_footnote_marks {
+#kmudqqtpmu .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#snwlgvujqu .gt_asterisk {
+#kmudqqtpmu .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#snwlgvujqu .gt_indent_1 {
+#kmudqqtpmu .gt_indent_1 {
   text-indent: 5px;
 }
 
-#snwlgvujqu .gt_indent_2 {
+#kmudqqtpmu .gt_indent_2 {
   text-indent: 10px;
 }
 
-#snwlgvujqu .gt_indent_3 {
+#kmudqqtpmu .gt_indent_3 {
   text-indent: 15px;
 }
 
-#snwlgvujqu .gt_indent_4 {
+#kmudqqtpmu .gt_indent_4 {
   text-indent: 20px;
 }
 
-#snwlgvujqu .gt_indent_5 {
+#kmudqqtpmu .gt_indent_5 {
   text-indent: 25px;
 }
 
-#snwlgvujqu .katex-display {
+#kmudqqtpmu .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#snwlgvujqu div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#kmudqqtpmu div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -2944,23 +2948,23 @@ Solo en 'contratos_montos' : 0</code></pre>
 <span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div id="kmsrwxtvri" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#kmsrwxtvri table {
+<div id="sbczttvinn" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#sbczttvinn table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#kmsrwxtvri thead, #kmsrwxtvri tbody, #kmsrwxtvri tfoot, #kmsrwxtvri tr, #kmsrwxtvri td, #kmsrwxtvri th {
+#sbczttvinn thead, #sbczttvinn tbody, #sbczttvinn tfoot, #sbczttvinn tr, #sbczttvinn td, #sbczttvinn th {
   border-style: none;
 }
 
-#kmsrwxtvri p {
+#sbczttvinn p {
   margin: 0;
   padding: 0;
 }
 
-#kmsrwxtvri .gt_table {
+#sbczttvinn .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -2986,12 +2990,12 @@ Solo en 'contratos_montos' : 0</code></pre>
   border-left-color: #D3D3D3;
 }
 
-#kmsrwxtvri .gt_caption {
+#sbczttvinn .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#kmsrwxtvri .gt_title {
+#sbczttvinn .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -3003,7 +3007,7 @@ Solo en 'contratos_montos' : 0</code></pre>
   border-bottom-width: 0;
 }
 
-#kmsrwxtvri .gt_subtitle {
+#sbczttvinn .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -3015,7 +3019,7 @@ Solo en 'contratos_montos' : 0</code></pre>
   border-top-width: 0;
 }
 
-#kmsrwxtvri .gt_heading {
+#sbczttvinn .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -3027,13 +3031,13 @@ Solo en 'contratos_montos' : 0</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#kmsrwxtvri .gt_bottom_border {
+#sbczttvinn .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#kmsrwxtvri .gt_col_headings {
+#sbczttvinn .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3048,7 +3052,7 @@ Solo en 'contratos_montos' : 0</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#kmsrwxtvri .gt_col_heading {
+#sbczttvinn .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3068,7 +3072,7 @@ Solo en 'contratos_montos' : 0</code></pre>
   overflow-x: hidden;
 }
 
-#kmsrwxtvri .gt_column_spanner_outer {
+#sbczttvinn .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3080,15 +3084,15 @@ Solo en 'contratos_montos' : 0</code></pre>
   padding-right: 4px;
 }
 
-#kmsrwxtvri .gt_column_spanner_outer:first-child {
+#sbczttvinn .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#kmsrwxtvri .gt_column_spanner_outer:last-child {
+#sbczttvinn .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#kmsrwxtvri .gt_column_spanner {
+#sbczttvinn .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -3100,11 +3104,11 @@ Solo en 'contratos_montos' : 0</code></pre>
   width: 100%;
 }
 
-#kmsrwxtvri .gt_spanner_row {
+#sbczttvinn .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#kmsrwxtvri .gt_group_heading {
+#sbczttvinn .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3130,7 +3134,7 @@ Solo en 'contratos_montos' : 0</code></pre>
   text-align: left;
 }
 
-#kmsrwxtvri .gt_empty_group_heading {
+#sbczttvinn .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -3145,15 +3149,15 @@ Solo en 'contratos_montos' : 0</code></pre>
   vertical-align: middle;
 }
 
-#kmsrwxtvri .gt_from_md > :first-child {
+#sbczttvinn .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#kmsrwxtvri .gt_from_md > :last-child {
+#sbczttvinn .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#kmsrwxtvri .gt_row {
+#sbczttvinn .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3172,7 +3176,7 @@ Solo en 'contratos_montos' : 0</code></pre>
   overflow-x: hidden;
 }
 
-#kmsrwxtvri .gt_stub {
+#sbczttvinn .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3185,7 +3189,7 @@ Solo en 'contratos_montos' : 0</code></pre>
   padding-right: 5px;
 }
 
-#kmsrwxtvri .gt_stub_row_group {
+#sbczttvinn .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3199,15 +3203,15 @@ Solo en 'contratos_montos' : 0</code></pre>
   vertical-align: top;
 }
 
-#kmsrwxtvri .gt_row_group_first td {
+#sbczttvinn .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#kmsrwxtvri .gt_row_group_first th {
+#sbczttvinn .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#kmsrwxtvri .gt_summary_row {
+#sbczttvinn .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3217,16 +3221,16 @@ Solo en 'contratos_montos' : 0</code></pre>
   padding-right: 5px;
 }
 
-#kmsrwxtvri .gt_first_summary_row {
+#sbczttvinn .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#kmsrwxtvri .gt_first_summary_row.thick {
+#sbczttvinn .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#kmsrwxtvri .gt_last_summary_row {
+#sbczttvinn .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3236,7 +3240,7 @@ Solo en 'contratos_montos' : 0</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#kmsrwxtvri .gt_grand_summary_row {
+#sbczttvinn .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3246,7 +3250,7 @@ Solo en 'contratos_montos' : 0</code></pre>
   padding-right: 5px;
 }
 
-#kmsrwxtvri .gt_first_grand_summary_row {
+#sbczttvinn .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3256,7 +3260,7 @@ Solo en 'contratos_montos' : 0</code></pre>
   border-top-color: #D3D3D3;
 }
 
-#kmsrwxtvri .gt_last_grand_summary_row_top {
+#sbczttvinn .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3266,11 +3270,11 @@ Solo en 'contratos_montos' : 0</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#kmsrwxtvri .gt_striped {
+#sbczttvinn .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#kmsrwxtvri .gt_table_body {
+#sbczttvinn .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3279,7 +3283,7 @@ Solo en 'contratos_montos' : 0</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#kmsrwxtvri .gt_footnotes {
+#sbczttvinn .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3293,7 +3297,7 @@ Solo en 'contratos_montos' : 0</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#kmsrwxtvri .gt_footnote {
+#sbczttvinn .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -3302,7 +3306,7 @@ Solo en 'contratos_montos' : 0</code></pre>
   padding-right: 5px;
 }
 
-#kmsrwxtvri .gt_sourcenotes {
+#sbczttvinn .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3316,7 +3320,7 @@ Solo en 'contratos_montos' : 0</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#kmsrwxtvri .gt_sourcenote {
+#sbczttvinn .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -3324,72 +3328,72 @@ Solo en 'contratos_montos' : 0</code></pre>
   padding-right: 5px;
 }
 
-#kmsrwxtvri .gt_left {
+#sbczttvinn .gt_left {
   text-align: left;
 }
 
-#kmsrwxtvri .gt_center {
+#sbczttvinn .gt_center {
   text-align: center;
 }
 
-#kmsrwxtvri .gt_right {
+#sbczttvinn .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#kmsrwxtvri .gt_font_normal {
+#sbczttvinn .gt_font_normal {
   font-weight: normal;
 }
 
-#kmsrwxtvri .gt_font_bold {
+#sbczttvinn .gt_font_bold {
   font-weight: bold;
 }
 
-#kmsrwxtvri .gt_font_italic {
+#sbczttvinn .gt_font_italic {
   font-style: italic;
 }
 
-#kmsrwxtvri .gt_super {
+#sbczttvinn .gt_super {
   font-size: 65%;
 }
 
-#kmsrwxtvri .gt_footnote_marks {
+#sbczttvinn .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#kmsrwxtvri .gt_asterisk {
+#sbczttvinn .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#kmsrwxtvri .gt_indent_1 {
+#sbczttvinn .gt_indent_1 {
   text-indent: 5px;
 }
 
-#kmsrwxtvri .gt_indent_2 {
+#sbczttvinn .gt_indent_2 {
   text-indent: 10px;
 }
 
-#kmsrwxtvri .gt_indent_3 {
+#sbczttvinn .gt_indent_3 {
   text-indent: 15px;
 }
 
-#kmsrwxtvri .gt_indent_4 {
+#sbczttvinn .gt_indent_4 {
   text-indent: 20px;
 }
 
-#kmsrwxtvri .gt_indent_5 {
+#sbczttvinn .gt_indent_5 {
   text-indent: 25px;
 }
 
-#kmsrwxtvri .katex-display {
+#sbczttvinn .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#kmsrwxtvri div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#sbczttvinn div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -3544,23 +3548,23 @@ Solo en 'contratos_montos' : 0</code></pre>
 <span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div id="ubgjczlaug" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#ubgjczlaug table {
+<div id="kfqbugfnhg" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#kfqbugfnhg table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#ubgjczlaug thead, #ubgjczlaug tbody, #ubgjczlaug tfoot, #ubgjczlaug tr, #ubgjczlaug td, #ubgjczlaug th {
+#kfqbugfnhg thead, #kfqbugfnhg tbody, #kfqbugfnhg tfoot, #kfqbugfnhg tr, #kfqbugfnhg td, #kfqbugfnhg th {
   border-style: none;
 }
 
-#ubgjczlaug p {
+#kfqbugfnhg p {
   margin: 0;
   padding: 0;
 }
 
-#ubgjczlaug .gt_table {
+#kfqbugfnhg .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -3586,12 +3590,12 @@ Solo en 'contratos_montos' : 0</code></pre>
   border-left-color: #D3D3D3;
 }
 
-#ubgjczlaug .gt_caption {
+#kfqbugfnhg .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#ubgjczlaug .gt_title {
+#kfqbugfnhg .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -3603,7 +3607,7 @@ Solo en 'contratos_montos' : 0</code></pre>
   border-bottom-width: 0;
 }
 
-#ubgjczlaug .gt_subtitle {
+#kfqbugfnhg .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -3615,7 +3619,7 @@ Solo en 'contratos_montos' : 0</code></pre>
   border-top-width: 0;
 }
 
-#ubgjczlaug .gt_heading {
+#kfqbugfnhg .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -3627,13 +3631,13 @@ Solo en 'contratos_montos' : 0</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#ubgjczlaug .gt_bottom_border {
+#kfqbugfnhg .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ubgjczlaug .gt_col_headings {
+#kfqbugfnhg .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3648,7 +3652,7 @@ Solo en 'contratos_montos' : 0</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#ubgjczlaug .gt_col_heading {
+#kfqbugfnhg .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3668,7 +3672,7 @@ Solo en 'contratos_montos' : 0</code></pre>
   overflow-x: hidden;
 }
 
-#ubgjczlaug .gt_column_spanner_outer {
+#kfqbugfnhg .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3680,15 +3684,15 @@ Solo en 'contratos_montos' : 0</code></pre>
   padding-right: 4px;
 }
 
-#ubgjczlaug .gt_column_spanner_outer:first-child {
+#kfqbugfnhg .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ubgjczlaug .gt_column_spanner_outer:last-child {
+#kfqbugfnhg .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ubgjczlaug .gt_column_spanner {
+#kfqbugfnhg .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -3700,11 +3704,11 @@ Solo en 'contratos_montos' : 0</code></pre>
   width: 100%;
 }
 
-#ubgjczlaug .gt_spanner_row {
+#kfqbugfnhg .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#ubgjczlaug .gt_group_heading {
+#kfqbugfnhg .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3730,7 +3734,7 @@ Solo en 'contratos_montos' : 0</code></pre>
   text-align: left;
 }
 
-#ubgjczlaug .gt_empty_group_heading {
+#kfqbugfnhg .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -3745,15 +3749,15 @@ Solo en 'contratos_montos' : 0</code></pre>
   vertical-align: middle;
 }
 
-#ubgjczlaug .gt_from_md > :first-child {
+#kfqbugfnhg .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ubgjczlaug .gt_from_md > :last-child {
+#kfqbugfnhg .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ubgjczlaug .gt_row {
+#kfqbugfnhg .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3772,7 +3776,7 @@ Solo en 'contratos_montos' : 0</code></pre>
   overflow-x: hidden;
 }
 
-#ubgjczlaug .gt_stub {
+#kfqbugfnhg .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3785,7 +3789,7 @@ Solo en 'contratos_montos' : 0</code></pre>
   padding-right: 5px;
 }
 
-#ubgjczlaug .gt_stub_row_group {
+#kfqbugfnhg .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3799,15 +3803,15 @@ Solo en 'contratos_montos' : 0</code></pre>
   vertical-align: top;
 }
 
-#ubgjczlaug .gt_row_group_first td {
+#kfqbugfnhg .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#ubgjczlaug .gt_row_group_first th {
+#kfqbugfnhg .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#ubgjczlaug .gt_summary_row {
+#kfqbugfnhg .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3817,16 +3821,16 @@ Solo en 'contratos_montos' : 0</code></pre>
   padding-right: 5px;
 }
 
-#ubgjczlaug .gt_first_summary_row {
+#kfqbugfnhg .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#ubgjczlaug .gt_first_summary_row.thick {
+#kfqbugfnhg .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#ubgjczlaug .gt_last_summary_row {
+#kfqbugfnhg .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3836,7 +3840,7 @@ Solo en 'contratos_montos' : 0</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#ubgjczlaug .gt_grand_summary_row {
+#kfqbugfnhg .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3846,7 +3850,7 @@ Solo en 'contratos_montos' : 0</code></pre>
   padding-right: 5px;
 }
 
-#ubgjczlaug .gt_first_grand_summary_row {
+#kfqbugfnhg .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3856,7 +3860,7 @@ Solo en 'contratos_montos' : 0</code></pre>
   border-top-color: #D3D3D3;
 }
 
-#ubgjczlaug .gt_last_grand_summary_row_top {
+#kfqbugfnhg .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3866,11 +3870,11 @@ Solo en 'contratos_montos' : 0</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#ubgjczlaug .gt_striped {
+#kfqbugfnhg .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ubgjczlaug .gt_table_body {
+#kfqbugfnhg .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3879,7 +3883,7 @@ Solo en 'contratos_montos' : 0</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#ubgjczlaug .gt_footnotes {
+#kfqbugfnhg .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3893,7 +3897,7 @@ Solo en 'contratos_montos' : 0</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#ubgjczlaug .gt_footnote {
+#kfqbugfnhg .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -3902,7 +3906,7 @@ Solo en 'contratos_montos' : 0</code></pre>
   padding-right: 5px;
 }
 
-#ubgjczlaug .gt_sourcenotes {
+#kfqbugfnhg .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3916,7 +3920,7 @@ Solo en 'contratos_montos' : 0</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#ubgjczlaug .gt_sourcenote {
+#kfqbugfnhg .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -3924,72 +3928,72 @@ Solo en 'contratos_montos' : 0</code></pre>
   padding-right: 5px;
 }
 
-#ubgjczlaug .gt_left {
+#kfqbugfnhg .gt_left {
   text-align: left;
 }
 
-#ubgjczlaug .gt_center {
+#kfqbugfnhg .gt_center {
   text-align: center;
 }
 
-#ubgjczlaug .gt_right {
+#kfqbugfnhg .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ubgjczlaug .gt_font_normal {
+#kfqbugfnhg .gt_font_normal {
   font-weight: normal;
 }
 
-#ubgjczlaug .gt_font_bold {
+#kfqbugfnhg .gt_font_bold {
   font-weight: bold;
 }
 
-#ubgjczlaug .gt_font_italic {
+#kfqbugfnhg .gt_font_italic {
   font-style: italic;
 }
 
-#ubgjczlaug .gt_super {
+#kfqbugfnhg .gt_super {
   font-size: 65%;
 }
 
-#ubgjczlaug .gt_footnote_marks {
+#kfqbugfnhg .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#ubgjczlaug .gt_asterisk {
+#kfqbugfnhg .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#ubgjczlaug .gt_indent_1 {
+#kfqbugfnhg .gt_indent_1 {
   text-indent: 5px;
 }
 
-#ubgjczlaug .gt_indent_2 {
+#kfqbugfnhg .gt_indent_2 {
   text-indent: 10px;
 }
 
-#ubgjczlaug .gt_indent_3 {
+#kfqbugfnhg .gt_indent_3 {
   text-indent: 15px;
 }
 
-#ubgjczlaug .gt_indent_4 {
+#kfqbugfnhg .gt_indent_4 {
   text-indent: 20px;
 }
 
-#ubgjczlaug .gt_indent_5 {
+#kfqbugfnhg .gt_indent_5 {
   text-indent: 25px;
 }
 
-#ubgjczlaug .katex-display {
+#kfqbugfnhg .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#ubgjczlaug div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#kfqbugfnhg div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -4328,23 +4332,23 @@ Figura&nbsp;4: Distribución del logaritmo del costo de contratos (sin valores c
 <span id="cb17-39"><a href="#cb17-39" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div id="mnbmwvrdvc" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#mnbmwvrdvc table {
+<div id="bnqohikqjj" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#bnqohikqjj table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#mnbmwvrdvc thead, #mnbmwvrdvc tbody, #mnbmwvrdvc tfoot, #mnbmwvrdvc tr, #mnbmwvrdvc td, #mnbmwvrdvc th {
+#bnqohikqjj thead, #bnqohikqjj tbody, #bnqohikqjj tfoot, #bnqohikqjj tr, #bnqohikqjj td, #bnqohikqjj th {
   border-style: none;
 }
 
-#mnbmwvrdvc p {
+#bnqohikqjj p {
   margin: 0;
   padding: 0;
 }
 
-#mnbmwvrdvc .gt_table {
+#bnqohikqjj .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -4370,12 +4374,12 @@ Figura&nbsp;4: Distribución del logaritmo del costo de contratos (sin valores c
   border-left-color: #D3D3D3;
 }
 
-#mnbmwvrdvc .gt_caption {
+#bnqohikqjj .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#mnbmwvrdvc .gt_title {
+#bnqohikqjj .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -4387,7 +4391,7 @@ Figura&nbsp;4: Distribución del logaritmo del costo de contratos (sin valores c
   border-bottom-width: 0;
 }
 
-#mnbmwvrdvc .gt_subtitle {
+#bnqohikqjj .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -4399,7 +4403,7 @@ Figura&nbsp;4: Distribución del logaritmo del costo de contratos (sin valores c
   border-top-width: 0;
 }
 
-#mnbmwvrdvc .gt_heading {
+#bnqohikqjj .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -4411,13 +4415,13 @@ Figura&nbsp;4: Distribución del logaritmo del costo de contratos (sin valores c
   border-right-color: #D3D3D3;
 }
 
-#mnbmwvrdvc .gt_bottom_border {
+#bnqohikqjj .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#mnbmwvrdvc .gt_col_headings {
+#bnqohikqjj .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4432,7 +4436,7 @@ Figura&nbsp;4: Distribución del logaritmo del costo de contratos (sin valores c
   border-right-color: #D3D3D3;
 }
 
-#mnbmwvrdvc .gt_col_heading {
+#bnqohikqjj .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4452,7 +4456,7 @@ Figura&nbsp;4: Distribución del logaritmo del costo de contratos (sin valores c
   overflow-x: hidden;
 }
 
-#mnbmwvrdvc .gt_column_spanner_outer {
+#bnqohikqjj .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4464,15 +4468,15 @@ Figura&nbsp;4: Distribución del logaritmo del costo de contratos (sin valores c
   padding-right: 4px;
 }
 
-#mnbmwvrdvc .gt_column_spanner_outer:first-child {
+#bnqohikqjj .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#mnbmwvrdvc .gt_column_spanner_outer:last-child {
+#bnqohikqjj .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#mnbmwvrdvc .gt_column_spanner {
+#bnqohikqjj .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -4484,11 +4488,11 @@ Figura&nbsp;4: Distribución del logaritmo del costo de contratos (sin valores c
   width: 100%;
 }
 
-#mnbmwvrdvc .gt_spanner_row {
+#bnqohikqjj .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#mnbmwvrdvc .gt_group_heading {
+#bnqohikqjj .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4514,7 +4518,7 @@ Figura&nbsp;4: Distribución del logaritmo del costo de contratos (sin valores c
   text-align: left;
 }
 
-#mnbmwvrdvc .gt_empty_group_heading {
+#bnqohikqjj .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -4529,15 +4533,15 @@ Figura&nbsp;4: Distribución del logaritmo del costo de contratos (sin valores c
   vertical-align: middle;
 }
 
-#mnbmwvrdvc .gt_from_md > :first-child {
+#bnqohikqjj .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#mnbmwvrdvc .gt_from_md > :last-child {
+#bnqohikqjj .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#mnbmwvrdvc .gt_row {
+#bnqohikqjj .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4556,7 +4560,7 @@ Figura&nbsp;4: Distribución del logaritmo del costo de contratos (sin valores c
   overflow-x: hidden;
 }
 
-#mnbmwvrdvc .gt_stub {
+#bnqohikqjj .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4569,7 +4573,7 @@ Figura&nbsp;4: Distribución del logaritmo del costo de contratos (sin valores c
   padding-right: 5px;
 }
 
-#mnbmwvrdvc .gt_stub_row_group {
+#bnqohikqjj .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4583,15 +4587,15 @@ Figura&nbsp;4: Distribución del logaritmo del costo de contratos (sin valores c
   vertical-align: top;
 }
 
-#mnbmwvrdvc .gt_row_group_first td {
+#bnqohikqjj .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#mnbmwvrdvc .gt_row_group_first th {
+#bnqohikqjj .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#mnbmwvrdvc .gt_summary_row {
+#bnqohikqjj .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4601,16 +4605,16 @@ Figura&nbsp;4: Distribución del logaritmo del costo de contratos (sin valores c
   padding-right: 5px;
 }
 
-#mnbmwvrdvc .gt_first_summary_row {
+#bnqohikqjj .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#mnbmwvrdvc .gt_first_summary_row.thick {
+#bnqohikqjj .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#mnbmwvrdvc .gt_last_summary_row {
+#bnqohikqjj .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4620,7 +4624,7 @@ Figura&nbsp;4: Distribución del logaritmo del costo de contratos (sin valores c
   border-bottom-color: #D3D3D3;
 }
 
-#mnbmwvrdvc .gt_grand_summary_row {
+#bnqohikqjj .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4630,7 +4634,7 @@ Figura&nbsp;4: Distribución del logaritmo del costo de contratos (sin valores c
   padding-right: 5px;
 }
 
-#mnbmwvrdvc .gt_first_grand_summary_row {
+#bnqohikqjj .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4640,7 +4644,7 @@ Figura&nbsp;4: Distribución del logaritmo del costo de contratos (sin valores c
   border-top-color: #D3D3D3;
 }
 
-#mnbmwvrdvc .gt_last_grand_summary_row_top {
+#bnqohikqjj .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4650,11 +4654,11 @@ Figura&nbsp;4: Distribución del logaritmo del costo de contratos (sin valores c
   border-bottom-color: #D3D3D3;
 }
 
-#mnbmwvrdvc .gt_striped {
+#bnqohikqjj .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#mnbmwvrdvc .gt_table_body {
+#bnqohikqjj .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4663,7 +4667,7 @@ Figura&nbsp;4: Distribución del logaritmo del costo de contratos (sin valores c
   border-bottom-color: #D3D3D3;
 }
 
-#mnbmwvrdvc .gt_footnotes {
+#bnqohikqjj .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4677,7 +4681,7 @@ Figura&nbsp;4: Distribución del logaritmo del costo de contratos (sin valores c
   border-right-color: #D3D3D3;
 }
 
-#mnbmwvrdvc .gt_footnote {
+#bnqohikqjj .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -4686,7 +4690,7 @@ Figura&nbsp;4: Distribución del logaritmo del costo de contratos (sin valores c
   padding-right: 5px;
 }
 
-#mnbmwvrdvc .gt_sourcenotes {
+#bnqohikqjj .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4700,7 +4704,7 @@ Figura&nbsp;4: Distribución del logaritmo del costo de contratos (sin valores c
   border-right-color: #D3D3D3;
 }
 
-#mnbmwvrdvc .gt_sourcenote {
+#bnqohikqjj .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -4708,72 +4712,72 @@ Figura&nbsp;4: Distribución del logaritmo del costo de contratos (sin valores c
   padding-right: 5px;
 }
 
-#mnbmwvrdvc .gt_left {
+#bnqohikqjj .gt_left {
   text-align: left;
 }
 
-#mnbmwvrdvc .gt_center {
+#bnqohikqjj .gt_center {
   text-align: center;
 }
 
-#mnbmwvrdvc .gt_right {
+#bnqohikqjj .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#mnbmwvrdvc .gt_font_normal {
+#bnqohikqjj .gt_font_normal {
   font-weight: normal;
 }
 
-#mnbmwvrdvc .gt_font_bold {
+#bnqohikqjj .gt_font_bold {
   font-weight: bold;
 }
 
-#mnbmwvrdvc .gt_font_italic {
+#bnqohikqjj .gt_font_italic {
   font-style: italic;
 }
 
-#mnbmwvrdvc .gt_super {
+#bnqohikqjj .gt_super {
   font-size: 65%;
 }
 
-#mnbmwvrdvc .gt_footnote_marks {
+#bnqohikqjj .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#mnbmwvrdvc .gt_asterisk {
+#bnqohikqjj .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#mnbmwvrdvc .gt_indent_1 {
+#bnqohikqjj .gt_indent_1 {
   text-indent: 5px;
 }
 
-#mnbmwvrdvc .gt_indent_2 {
+#bnqohikqjj .gt_indent_2 {
   text-indent: 10px;
 }
 
-#mnbmwvrdvc .gt_indent_3 {
+#bnqohikqjj .gt_indent_3 {
   text-indent: 15px;
 }
 
-#mnbmwvrdvc .gt_indent_4 {
+#bnqohikqjj .gt_indent_4 {
   text-indent: 20px;
 }
 
-#mnbmwvrdvc .gt_indent_5 {
+#bnqohikqjj .gt_indent_5 {
   text-indent: 25px;
 }
 
-#mnbmwvrdvc .katex-display {
+#bnqohikqjj .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#mnbmwvrdvc div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#bnqohikqjj div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>

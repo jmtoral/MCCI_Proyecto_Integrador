@@ -9,8 +9,10 @@ website:
     left:
       - text: "Inicio"
         href: index.qmd
-      - text: "Exploración de Datos"
+      - text: "Exploración general"
         href: notebooks/01_exploracion.qmd
+      - text: "Análisis contratos_montos"
+        href: notebooks/02_contratos_montos.qmd
       - text: "Diccionario"
         href: referencias/diccionario_datos.qmd
     right:
