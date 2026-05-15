@@ -231,47 +231,59 @@ Estos datos ofrecen un terreno fértil para aplicar técnicas de ML de nivel int
 
 ### 📦 Clasificación
 
-| Proyecto | Variable objetivo | Features sugeridas | Algoritmo de entrada |
-|---|---|---|---|
-| **¿Persona física o moral?** | `tipo_persona` | `costo`, `tipo_contrato`, `partido`, `ano` | Regresión logística, árbol de decisión |
-| **¿Qué partido firmó este contrato?** | `partido` | `costo`, `tipo_contrato`, `tipo_persona`, `area`, `ano` | Random Forest, KNN |
-| **¿Adquisición o prestación de servicio?** | `tipo_contrato` (binarizado) | `costo`, `tipo_persona`, `partido`, `duracion_dias` | Regresión logística |
-| **¿Contrato de alto valor?** | `costo > mediana` (variable nueva) | `tipo_contrato`, `partido`, `tipo_persona`, `mes_firma` | Árbol de decisión, Naive Bayes |
+**¿Es posible saber si un proveedor es persona física o moral sin mirar esa columna?**
+*Target:* `tipo_persona` · *Features:* `costo`, `tipo_contrato`, `partido`, `ano` · *Por dónde empezar:* regresión logística, árbol de decisión
 
-**Nota metodológica:** Antes de modelar, discute con tu equipo si el modelo tiene riesgo de aprender sesgos de los datos (p. ej., ¿es justo predecir el partido a partir del monto?).
+**¿Puede un modelo adivinar qué partido firmó un contrato a partir de sus características?**
+*Target:* `partido` · *Features:* `costo`, `tipo_contrato`, `tipo_persona`, `area`, `ano` · *Por dónde empezar:* Random Forest, KNN
+
+**¿Se puede distinguir entre una adquisición y una prestación de servicio usando solo variables numéricas?**
+*Target:* `tipo_contrato` (binarizado) · *Features:* `costo`, `tipo_persona`, `partido`, `duracion_dias` · *Por dónde empezar:* regresión logística
+
+**¿Qué variables predicen mejor si un contrato será de alto valor?**
+*Target:* `alto_valor` (variable nueva: `costo > mediana`) · *Features:* `tipo_contrato`, `partido`, `tipo_persona`, `mes_firma` · *Por dónde empezar:* árbol de decisión, Naive Bayes
+
+> **Nota metodológica:** Antes de modelar, discute con tu equipo si el modelo tiene riesgo de aprender sesgos de los datos (p. ej., ¿es justo predecir el partido a partir del monto?).
 
 ---
 
 ### 📈 Regresión
 
-| Proyecto | Variable objetivo | Features sugeridas | Algoritmo de entrada |
-|---|---|---|---|
-| **Predicción del monto del contrato** | `costo` (log) | `tipo_contrato`, `partido`, `tipo_persona`, `ano`, `duracion_dias` | Regresión lineal, Ridge/Lasso |
-| **Duración del contrato** | `fecha_fin_vigencia - fecha_inicio_vigencia` | `costo`, `tipo_contrato`, `partido`, `ano` | Regresión lineal |
+**¿Podemos estimar el monto de un contrato antes de que se firme?**
+*Target:* `costo` (aplicar `log1p`) · *Features:* `tipo_contrato`, `partido`, `tipo_persona`, `ano`, `duracion_dias` · *Por dónde empezar:* regresión lineal, Ridge/Lasso
 
-**Ojo:** `costo` tiene una distribución muy sesgada; aplica `log()` antes de modelar y reporta el RMSE en escala original.
+> **Ojo:** `costo` tiene una distribución muy sesgada. Aplica `log()` antes de modelar y reporta el RMSE en escala original para que el resultado sea interpretable.
+
+**¿Qué factores determinan cuánto dura un contrato?**
+*Target:* `fecha_fin_vigencia - fecha_inicio_vigencia` (en días) · *Features:* `costo`, `tipo_contrato`, `partido`, `ano` · *Por dónde empezar:* regresión lineal
 
 ---
 
 ### 🔍 Clustering (aprendizaje no supervisado)
 
-| Proyecto | Descripción | Algoritmo de entrada |
-|---|---|---|
-| **Perfiles de proveedores** | Agrupa proveedores según número de contratos, monto total y partidos con los que trabajan | K-Means, clustering jerárquico |
-| **Perfiles de partidos** | Agrupa partidos según sus patrones de contratación (tipos, montos, proveedores frecuentes) | K-Means |
-| **Detección de anomalías** | Identifica contratos con combinaciones inusuales de monto, duración y tipo | Isolation Forest, DBSCAN |
+**¿Existen perfiles distintos de proveedores según cómo contratan?**
+Agrupa proveedores por número de contratos, monto total y partidos con los que trabajan. *Por dónde empezar:* K-Means, clustering jerárquico
+
+**¿Se parecen entre sí los partidos en sus patrones de contratación?**
+Agrupa partidos por tipos de contrato, montos y proveedores frecuentes. *Por dónde empezar:* K-Means
+
+**¿Hay contratos que parecen anómalos o fuera de lo común?**
+Identifica contratos con combinaciones raras de monto, duración y tipo. *Por dónde empezar:* Isolation Forest, DBSCAN
 
 ---
 
 ### 🔤 Procesamiento de Lenguaje Natural (NLP) — nivel básico
 
-La columna `descripcion` contiene texto libre con el objeto de cada contrato. Algunas ideas:
+La columna `descripcion` contiene texto libre con el objeto de cada contrato. Algunas preguntas que puedes responder con NLP básico:
 
-| Proyecto | Técnica |
-|---|---|
-| **Clasificar contratos por tema usando la descripción** | TF-IDF + clasificador | 
-| **Palabras más frecuentes por partido** | Nube de palabras, n-gramas |
-| **¿Qué tipos de servicios contrata cada partido?** | Topic modeling (LDA) |
+**¿De qué hablan los contratos? ¿Hay temas recurrentes por partido?**
+*Técnica:* TF-IDF + clasificador, topic modeling (LDA)
+
+**¿Qué palabras distinguen los contratos de un partido de los de otro?**
+*Técnica:* n-gramas, nube de palabras comparativa
+
+**¿Se puede clasificar el tema de un contrato a partir de su descripción?**
+*Técnica:* TF-IDF + regresión logística o árbol de decisión
 
 ---
 
@@ -288,7 +300,7 @@ montos <- montos |>
     # Mes de firma (estacionalidad)
     mes_firma = month(fecha_firma),
 
-    # ¿Es fin de año? (los gobiernos suelen contratar más en dic)
+    # ¿Es fin de año? (los gobiernos suelen contratar más en diciembre)
     es_diciembre = month(fecha_firma) == 12,
 
     # Logaritmo del costo (para modelos de regresión)
