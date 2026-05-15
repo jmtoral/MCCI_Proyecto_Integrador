@@ -33,5 +33,7 @@ renv/staging/
 # Logs
 *.log
 
-# Documentos renderizados (se regeneran con quarto render)
-docs/*.html
+# Carpeta _site (output alternativo de Quarto, no se versiona)
+_site/
+
+/.quarto/

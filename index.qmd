@@ -8,7 +8,7 @@ Bienvenido al repositorio educativo del análisis de datos de contratos de parti
 ## ¿Qué encontrarás aquí?
 
 - 📊 [Exploración de los datos](notebooks/01_exploracion.qmd): Carga, comparación y visualización de ambos datasets.
-- 📖 [Diccionario de datos](docs/diccionario_datos.md): Descripción detallada de cada variable.
+- 📖 [Diccionario de datos](referencias/diccionario_datos.qmd): Descripción detallada de cada variable.
 - 📁 Datos originales en la carpeta `datos/`.
 
 ## Datasets

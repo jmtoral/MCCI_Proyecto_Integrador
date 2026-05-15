@@ -1,6 +1,6 @@
 project:
   type: website
-  output-dir: _site
+  output-dir: docs
 
 website:
   title: "MCCI — Contratos de Partidos Políticos"
@@ -12,10 +12,10 @@ website:
       - text: "Exploración de Datos"
         href: notebooks/01_exploracion.qmd
       - text: "Diccionario"
-        href: docs/diccionario_datos.md
+        href: referencias/diccionario_datos.qmd
     right:
       - icon: github
-        href: https://github.com/
+        href: https://github.com/jmtoral/MCCI_Proyecto_Integrador
 
 format:
   html:
