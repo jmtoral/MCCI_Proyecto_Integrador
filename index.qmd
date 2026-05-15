@@ -1,0 +1,19 @@
+---
+title: "MCCI — Contratos de Partidos Políticos"
+lang: es
+---
+
+Bienvenido al repositorio educativo del análisis de datos de contratos de partidos políticos compartidos por **Mexicanos Contra la Corrupción y la Impunidad (MCCI)**.
+
+## ¿Qué encontrarás aquí?
+
+- 📊 [Exploración de los datos](notebooks/01_exploracion.qmd): Carga, comparación y visualización de ambos datasets.
+- 📖 [Diccionario de datos](docs/diccionario_datos.md): Descripción detallada de cada variable.
+- 📁 Datos originales en la carpeta `datos/`.
+
+## Datasets
+
+| Archivo | Filas | Columnas | Descripción |
+|---|---|---|---|
+| `contratos.csv` | 15,736 | 28 | Dataset completo de contratos |
+| `contratos_montos.csv` | 15,118 | 30 | Dataset con partido estandarizado |

@@ -1,0 +1,45 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "MCCI — Contratos de Partidos Políticos"
+  description: "Material educativo para el análisis de datos de contrataciones de partidos políticos en México."
+  navbar:
+    left:
+      - text: "Inicio"
+        href: index.qmd
+      - text: "Exploración de Datos"
+        href: notebooks/01_exploracion.qmd
+      - text: "Diccionario"
+        href: docs/diccionario_datos.md
+    right:
+      - icon: github
+        href: https://github.com/
+
+format:
+  html:
+    theme:
+      light: flatly
+      dark: darkly
+    toc: true
+    toc-depth: 3
+    toc-title: "Contenido"
+    number-sections: true
+    code-fold: true
+    code-summary: "Ver código"
+    code-tools: true
+    highlight-style: github
+    lang: es
+    date-format: "D [de] MMMM [de] YYYY"
+    fig-align: center
+    fig-width: 9
+    fig-height: 6
+
+execute:
+  echo: true
+  warning: false
+  message: false
+  cache: false
+
+editor: visual
